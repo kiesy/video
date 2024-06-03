@@ -9,9 +9,7 @@ export const DealFlowObject = z.object({
   productImage: z.string().url(), // Image URL validator
 });
 
-export const ParentObject = z.object({
-  deals: z.array(DealFlowObject),
-});
+export const ParentObject = z.array(DealFlowObject);
 
 export type DealFlowObjectType = z.infer<typeof DealFlowObject>;
 export type ParentObjectType = z.infer<typeof ParentObject>;
