@@ -15,58 +15,63 @@
   width: 100%;
   height: 100%;
   font-size: 12rem; /* Adjust size as needed */
-  color: yellow; /* Adjust color as needed */
+  color: #C5E898; /* Adjust color as needed */
   transform-style: preserve-3d;
   font-family: 'Arial', sans-serif;
   font-weight: 700;
+  white-space: normal; /* Allows text to wrap */
+  word-break: break-word; /* Ensures words break to prevent overflow */
+  overflow-wrap: break-word; /* Ensures proper breaking of words */
+  text-align: center; /* Centers text */
+
 }
 
 .letter-3d {
-  text-shadow: 
-  4px -4px 0 rgba(238, 46, 53, 0.8),    /* Red shadow */
-  5px -5px 0 rgba(238, 46, 53, 0.8),    /* Red shadow */
-  6px -6px 0 rgba(238, 46, 53, 0.75),   /* Darker red shadow */
-  7px -7px 0 rgba(238, 46, 53, 0.7),    /* Darker red shadow */
-  8px -8px 0 rgba(238, 46, 53, 0.65),   /* Darker red shadow */
-  9px -9px 0 rgba(238, 46, 53, 0.6),    /* Darker red shadow */
-  10px -10px 0 rgba(204, 0, 0, 0.55),   /* Darker red shadow */
-  11px -11px 0 rgba(204, 0, 0, 0.5),    /* Darker red shadow */
-  12px -12px 0 rgba(204, 0, 0, 0.45),   /* Darker red shadow */
-  13px -13px 0 rgba(204, 0, 0, 0.4),    /* Darker red shadow */
-  14px -14px 0 rgba(204, 0, 0, 0.35),   /* Darker red shadow */
-  15px -15px 0 rgba(153, 0, 0, 0.3),    /* Darker red shadow */
-  16px -16px 0 rgba(153, 0, 0, 0.25),   /* Darker red shadow */
-  17px -17px 0 rgba(153, 0, 0, 0.2),    /* Darker red shadow */
-  18px -18px 0 rgba(153, 0, 0, 0.15),   /* Darker red shadow */
-  19px -19px 0 rgba(153, 0, 0, 0.1),    /* Darker red shadow */
-  20px -20px 0 rgba(102, 0, 0, 0.05),   /* Darker red shadow */
-  21px -21px 0 rgba(102, 0, 0, 0.05),   /* Darker red shadow */
-  22px -22px 0 rgba(102, 0, 0, 0.05),   /* Darker red shadow */
-  23px -23px 0 rgba(102, 0, 0, 0.05),   /* Darker red shadow */
-  24px -24px 0 rgba(102, 0, 0, 0.05),   /* Darker red shadow */
-  25px -25px 0 rgba(102, 0, 0, 0.05),   /* Darker red shadow */
-  26px -26px 0 rgba(102, 0, 0, 0.05),   /* Darker red shadow */
-  27px -27px 0 rgba(102, 0, 0, 0.05),   /* Darker red shadow */
-  28px -28px 0 rgba(102, 0, 0, 0.05),   /* Darker red shadow */
-  29px -29px 0 rgba(102, 0, 0, 0.05),   /* Darker red shadow */
-  30px -30px 0 rgba(102, 0, 0, 0.05),   /* Darker red shadow */
-  31px -31px 0 rgba(102, 0, 0, 0.05),   /* Darker red shadow */
-  32px -32px 0 rgba(102, 0, 0, 0.05),   /* Darker red shadow */
-  33px -33px 0 rgba(102, 0, 0, 0.05),   /* Darker red shadow */
-  34px -34px 0 rgba(102, 0, 0, 0.05),   /* Darker red shadow */
-  35px -35px 0 rgba(102, 0, 0, 0.05),   /* Darker red shadow */
-  36px -36px 0 rgba(102, 0, 0, 0.05),   /* Darker red shadow */
-  37px -37px 0 rgba(102, 0, 0, 0.05),   /* Darker red shadow */
-  38px -38px 0 rgba(102, 0, 0, 0.05),   /* Darker red shadow */
-  39px -39px 0 rgba(102, 0, 0, 0.05),   /* Darker red shadow */
-  40px -40px 0 rgba(102, 0, 0, 0.05),   /* Darker red shadow */
-  41px -41px 0 rgba(102, 0, 0, 0.05),   /* Darker red shadow */
-  42px -42px 0 rgba(102, 0, 0, 0.05),   /* Darker red shadow */
-  43px -43px 0 rgba(102, 0, 0, 0.05),   /* Darker red shadow */
-  44px -44px 0 rgba(102, 0, 0, 0.05),   /* Darker red shadow */
-  45px -45px 0 rgba(102, 0, 0, 0.05),   /* Darker red shadow */
-  46px -46px 0 rgba(102, 0, 0, 0.05),   /* Darker red shadow */
-  47px -47px 0 rgba(102, 0, 0, 0.05);   /* Darker red shadow */
+  text-shadow:
+  4px -4px 0 rgba(18, 69, 89, 0.8),
+  5px -5px 0 rgba(18, 69, 89, 0.8),
+  6px -6px 0 rgba(18, 69, 89, 0.75),
+  7px -7px 0 rgba(18, 69, 89, 0.7),
+  8px -8px 0 rgba(18, 69, 89, 0.65),
+  9px -9px 0 rgba(18, 69, 89, 0.6),
+  10px -10px 0 rgba(15, 56, 72, 0.55),
+  11px -11px 0 rgba(15, 56, 72, 0.5),
+  12px -12px 0 rgba(15, 56, 72, 0.45),
+  13px -13px 0 rgba(15, 56, 72, 0.4),
+  14px -14px 0 rgba(15, 56, 72, 0.35),
+  15px -15px 0 rgba(11, 43, 55, 0.3),
+  16px -16px 0 rgba(11, 43, 55, 0.25),
+  17px -17px 0 rgba(11, 43, 55, 0.2),
+  18px -18px 0 rgba(11, 43, 55, 0.15),
+  19px -19px 0 rgba(11, 43, 55, 0.1),
+  20px -20px 0 rgba(8, 31, 40, 0.05),
+  21px -21px 0 rgba(8, 31, 40, 0.05),
+  22px -22px 0 rgba(8, 31, 40, 0.05),
+  23px -23px 0 rgba(8, 31, 40, 0.05),
+  24px -24px 0 rgba(8, 31, 40, 0.05),
+  25px -25px 0 rgba(8, 31, 40, 0.05),
+  26px -26px 0 rgba(8, 31, 40, 0.05),
+  27px -27px 0 rgba(8, 31, 40, 0.05),
+  28px -28px 0 rgba(8, 31, 40, 0.05),
+  29px -29px 0 rgba(8, 31, 40, 0.05),
+  30px -30px 0 rgba(8, 31, 40, 0.05),
+  31px -31px 0 rgba(8, 31, 40, 0.05),
+  32px -32px 0 rgba(8, 31, 40, 0.05),
+  33px -33px 0 rgba(8, 31, 40, 0.05),
+  34px -34px 0 rgba(8, 31, 40, 0.05),
+  35px -35px 0 rgba(8, 31, 40, 0.05),
+  36px -36px 0 rgba(8, 31, 40, 0.05),
+  37px -37px 0 rgba(8, 31, 40, 0.05),
+  38px -38px 0 rgba(8, 31, 40, 0.05),
+  39px -39px 0 rgba(8, 31, 40, 0.05),
+  40px -40px 0 rgba(8, 31, 40, 0.05),
+  41px -41px 0 rgba(8, 31, 40, 0.05),
+  42px -42px 0 rgba(8, 31, 40, 0.05),
+  43px -43px 0 rgba(8, 31, 40, 0.05),
+  44px -44px 0 rgba(8, 31, 40, 0.05),
+  45px -45px 0 rgba(8, 31, 40, 0.05),
+  46px -46px 0 rgba(8, 31, 40, 0.05),
+  47px -47px 0 rgba(8, 31, 40, 0.05);
 
 
 

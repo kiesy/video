@@ -1,6 +1,6 @@
 import { Sequence } from "remotion";
 import AnimatedDealList from "./DealFlow";
-import { ParentObjectType } from './schema';
+import { DealDataIndividualType } from './schema';
 import { LogoAnimation } from "./Opening";
 import { AnimatedText } from "./wowzaText";
 import WowzaCard from "./DealFlow/wowzaCard";
@@ -9,36 +9,71 @@ import { WowzaVerticalText } from "./wowzaVerticalText";
 import { EndingAnimation } from "./ending";
 import icon from '../public/dollar-circle.svg'
 
-interface Props {
-  dealsData: ParentObjectType;
-}
 
-export const WowzaDealVideo: React.FC<Props> = ({ dealsData }) => {
-  const cardDuration = 90;
-  const openingDuration = 45;
-  const cardSectLength = dealsData.length * cardDuration;
+
+
+/*
+const dealsData =  [
+  {
+    brand: 'Quakers',
+    name: "Product 1",
+    packageSize: "Large",
+    price: 1.99,
+    salePrice: 1.50,
+    productImage: "https://assets.shop.loblaws.ca/products/21550066/b3/en/front/21550066_front_a06_@2.png",
+  },
+  {
+    brand: 'Quakers',
+    name: "Product 2",
+    packageSize: "Small",
+    price: 5.25,
+    salePrice: 4.23,
+    productImage: "https://assets.shop.loblaws.ca/products/21550066/b3/en/front/21550066_front_a06_@2.png",
+  },
+  {
+    brand: 'Quakers',
+    name: "Product 1",
+    packageSize: "Large",
+    price: 1.24,
+    salePrice: 0.99,
+    productImage: "https://assets.shop.loblaws.ca/products/21550066/b3/en/front/21550066_front_a06_@2.png",
+  },
+  {
+    brand: 'Quakers',
+    name: "Product 2",
+    packageSize: "Small",
+    price: 5.43,
+    salePrice: 3.50,
+    productImage: "https://assets.shop.loblaws.ca/products/21550066/b3/en/front/21550066_front_a06_@2.png",
+  },
+
+]
+*/
+
+interface Props {
+  dealsData: DealDataIndividualType;
+  storeName: string;
+  [key: string]: unknown;  // Allow any other props of unknown type.
+}
+export const WowzaDealVideo: React.FC<Props> = ({ dealsData, storeName }) => {
+
+  console.log(dealsData)
+  const cardDuration = 300;
+  const openingDuration = 180;
+  const cardSectLength = dealsData.length * cardDuration/2;
 
   return (
     <>
       <Sequence durationInFrames={openingDuration}>
         <LogoAnimation />
       </Sequence>
-      <Sequence from={openingDuration - 20} durationInFrames={65}>
-        <AnimatedText text="WOWZA!" />
+      <Sequence from={openingDuration - 40} durationInFrames={220}>
+        <AnimatedText text={storeName.toUpperCase()} />
       </Sequence>
-      {dealsData.map((deal, index) => (
-        <Sequence
-          key={index}
-          from={openingDuration + 45 + index * cardDuration}
-          durationInFrames={cardDuration}
-          name="wowzaCard"
-        >
-          <WowzaCard price={deal.price} index={index} duration={cardDuration} />
-        </Sequence>
-      ))}
+
       <Sequence
-        from={openingDuration + 45}
-        durationInFrames={cardSectLength + 60}
+        from={openingDuration + 180}
+        durationInFrames={cardSectLength + 120}
         name="icons"
       >
         <FallingIcons
@@ -47,22 +82,15 @@ export const WowzaDealVideo: React.FC<Props> = ({ dealsData }) => {
         />
       </Sequence>
       <Sequence
-        from={openingDuration + 45}
+        from={openingDuration + 180}
         durationInFrames={cardSectLength}
         name="dealList"
       >
         <AnimatedDealList deals={dealsData} duration={cardDuration} />
       </Sequence>
       <Sequence
-        from={openingDuration + 45 + cardSectLength}
-        durationInFrames={60}
-        name="WowzaVertical"
-      >
-        <WowzaVerticalText text="WOWZA!" />
-      </Sequence>
-      <Sequence
-        from={openingDuration + 45 + cardSectLength + 60}
-        durationInFrames={110}
+        from={openingDuration + 90 + cardSectLength+ 120}
+        durationInFrames={220}
         name="Ending"
       >
         <EndingAnimation />
@@ -70,3 +98,7 @@ export const WowzaDealVideo: React.FC<Props> = ({ dealsData }) => {
     </>
   );
 };
+
+/*
+
+    */

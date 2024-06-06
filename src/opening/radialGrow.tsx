@@ -28,7 +28,7 @@ export const RadialGrow: React.FC = () => {
         left: '50%',
         width: `${size}px`,
         height: `${size}px`,
-        backgroundColor: '#EE2E35',
+        backgroundColor: '#124559',
         
         borderRadius: '50%',
         transform: 'translate(-50%, -50%)',

@@ -48,6 +48,6 @@ const style = {
     position: 'relative',
     width: '100%',
     height: '100%',
-    background: '#EE2E35'
+    background: '#124559'
   },
 }
